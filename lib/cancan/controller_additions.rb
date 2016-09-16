@@ -399,3 +399,9 @@ if defined? ActionController::Base
     include CanCan::ControllerAdditions
   end
 end
+
+if defined? ActionController::API
+  ActionController::API.class_eval do
+    include CanCan::ControllerAdditions
+  end
+end
